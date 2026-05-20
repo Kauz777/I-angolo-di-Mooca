@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Italiano</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--TABLE MENU-->   
+    <div class="HOMEBAR">
+        <table>
+            <tr>
+                <th><a href="#inicio">INICIO</a></th>
+                <th><a href="#sobre">SOBRE NÓS</a></th>    
+                <th><a href="#cardapio">CARDAPIO</a></th>    
+                <th><a href="#pedido">PEDIDO</a></th>
+                <th><a href="#agendamento">AGENDAMENTO</a></th>
+                <th><a href="#endereço">ENDEREÇO</a></th>
+            </tr>
+        </table>
+    </div>
+
+    <!--BACKGROUND 1-->
+    <div class="background1">
+        <img src="./image/background/background1.jpg" alt="Background">
+    </div>
+ 
+    <!--INICIO-->
+    <div class="inicio" id="inicio">
+        <img src="./image/logo.png" alt="Logo">
+        <h1>BEM-VINDO</h1>
+    </div>
+
+    <!--SOBRE-->
+    <div class="sobre" id="sobre">
+        <h1>Somos uma das maiores referências da gastronomia italiana na Mooca. Venha saborear nossos pratos especiais e faça já o seu pedido ou agende sua visita conosco!</h1>
+        <!-- Alterado para tag video correta para rodar o arquivo .mov -->
+        <video autoplay loop muted playsinline>
+            <source src="./image/sobre/sobre.mov" type="video/mp4">
+        </video>
+        <div class="background2">
+            <img src="./image/background/background2.jpg" alt="Background2">
+        </div>
+    </div>
+
+    <!--CARDAPIO-->
+    <div class="cardapio" id="cardapio">
+        <h1>CARDAPIO</h1>
+        <!-- Div auxiliar adicionada para organizar o alinhamento dos itens -->
+        <div class="grid-cardapio">
+            <div class="MACARRÃO">
+                <img src="./image/cardapio/macarrao3.webp" alt="Macarrão">
+                <h1>MACARRÃO</h1> 
+            </div>
+            <div class="RISOTO">
+                <img src="./image/cardapio/1risoto.webp" alt="Risoto">
+                <h1>RISOTO</h1> 
+            </div>
+            <div class="OSSOBUCO">
+                <img src="./image/cardapio/ossobuco2.webp" alt="Ossobuco">
+                <h1>OSSOBUCO</h1> 
+            </div>
+            <div class="TIRAMISU">
+                <img src="./image/cardapio/tiramisu3.jpg" alt="Tiramisu">
+                <h1>TIRAMISU</h1> 
+            </div>        
+        </div>
+    </div>
+
+    <!--BACKGROUND 3-->
+    <div class="background3">
+        <img src="./image/background/background3.jpg" alt="background3">
+    </div>
+
+    <!--PEDIDO-->    
+    <div class="pedido" id="pedido">
+        <h1>FAÇA SEU PEDIDO</h1>
+        <a href="https://wa.me/5511912201650" target="_blank">
+            <img src="./image/whatsapp/whatsapp.jpg" alt="Fazer Pedido pelo WhatsApp">
+        </a>
+    </div>
+
+    <!--AGENDAMENTO-->
+    <div class="agendamento" id="agendamento">
+        <h1>AGENDAMENTO</h1>
+        <form>
+            <!--nome-->
+            <label>Nome:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome">
+            <!--sobrenome-->
+            <label>Sobrenome:</label>
+            <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome">
+            <!--agendamento data-->
+            <label>Data do agendamento:</label>
+            <input type="date" name="data">
+            <!--agendamento hora-->
+            <label>Hora:</label>
+            <input type="time" name="hora">
+            <!--cpf-->
+            <label>CPF:</label>
+            <input type="text" name="cpf" maxlength="14" placeholder="000.000.000-00">
+
+            <!-- Botão -->
+            <button type="submit" class="btn-enviar">Enviar Agendamento</button>
+        </form>
+    </div>
+
+    <!--endereço-->
+    <div class="endereço" id="endereço">
+        <h1>NOSSO ENDEREÇO</h1>
+        <!--LINK IFRAME SRC-->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4247781030234!2d-46.6019553!3d-23.5531943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5933a39bc6ed%3A0x289745b6db726f1a!2sMooca%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1716145000000!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="450" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <div class="depoimentos">
+        <h1>O que dizem sobre nós</h1>
+        
+        <!-- Exemplo de iframe simples de um post ou widget de avaliação -->
+        <iframe src="https://www.instagram.com/p/C_xY2uNxXyz/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </div>
+
+</body>
+</html>
