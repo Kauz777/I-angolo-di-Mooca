@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+h1, th {
+    font-family: 'Playfair Display', serif;
+}
+
+/* MENU superior */
+.HOMEBAR {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(163, 184, 153, 0.2); /* Linha fina sutil sob o menu */
+}
+
+.HOMEBAR table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.HOMEBAR a {
+    text-decoration: none;
+    color: #a3b899;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.HOMEBAR a:hover {
+    color: #ffffff; /* Destaca o link ao passar o mouse */
+}
+
+/* FULLSCREEN para todas as secoes */
+.inicio, .sobre, .cardapio, .pedido, .agendamento, .endereço {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative; /* Necessário para o posicionamento dos novos divisores */
+}
+
+/* Esconde as divs soltas do HTML */
+.background1, .background2, .background3 {
+    display: none;
+}
+
+/* BACKGROUNDS com efeito fixo (Parallax) */
+.inicio {
+    background-image: url('../image/background/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pedido {
+    background-image: url('../image/background/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.agendamento {
+    background-image: url('../image/background/background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* SEÇÃO - Inicio */
+.inicio img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* SEÇÃO - Sobre */
+.sobre {
+    background-color: #181818;
+    flex-direction: row;      
+    gap: 40px;                 
+    max-width: 100%;           
+    text-align: left;          
+}
+
+.sobre video {
+    width: 45%;                
+    max-width: 550px;
+    border-radius: 8px;
+    order: 2;                  
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.sobre h1 {
+    width: 45%;                
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.6;
+    order: 1;                  
+}
+
+/* SEÇÃO - Cardapio */
+.cardapio {
+    background-color: #1f1f1f;
+}
+
+.cardapio h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* MELHORIA VETORIAL: Cards com bordas gradientes sutis e efeito hover refinado */
+.grid-cardapio > div {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.grid-cardapio > div:hover {
+    transform: translateY(-8px);
+    border-color: rgba(163, 184, 153, 0.4); /* Brilho verde sálvia sutil na borda */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.grid-cardapio img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid-cardapio h1 {
+    font-size: 16px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+/* SEÇÃO - Pedido */
+.pedido img {
+    max-width: 180px;
+    margin-top: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.pedido img:hover {
+    transform: scale(1.05); /* Sutil pulo no botão do WhatsApp */
+}
+
+/* SEÇÃO - Agendamento (Formulario) */
+.agendamento form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.agendamento label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #bcbcbc;
+    letter-spacing: 0.5px;
+}
+
+.agendamento input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #121212;
+    color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.agendamento input:focus {
+    outline: none;
+    border-color: #a3b899; /* Foco elegante no input */
+}
+
+/* O BOTÃO: Transição suave de cor */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: #a3b899;
+    color: #121212;            
+    border: none;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #bdcbb7; 
+    transform: translateY(-1px);
+}
+
+/* SEÇÃO - Endereco */
+.endereço {
+    background-color: #121212;
+}
+
+.endereço iframe {
+    max-width: 800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* SEÇÃO - Depoimentos */
+.depoimentos {
+    background-color: #181818; /* Mudado sutilmente para combinar com a alternância de fundos */
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* MELHORIA VETORIAL: Linhas finas e elegantes de design italiano antes e depois do título */
+.depoimentos h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.depoimentos h1::before, .depoimentos h1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to var(--direction, right), #a3b899, transparent);
+}
+
+.depoimentos h1::before {
+    left: -80px;
+    --direction: left;
+}
+
+.depoimentos h1::after {
+    right: -80px;
+    --direction: right;
+}
+
+.depoimentos iframe {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* RESPONSIVIDADE (Para Celular) */
+@media (max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre video, .sobre h1 {
+        width: 100%;
+    }
+    .depoimentos h1::before, .depoimentos h1::after {
+        display: none; /* Remove as linhas decorativas em telas pequenas para não quebrar o texto */
+    }
+}
