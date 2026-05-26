@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Italiano</title>
+    <title>I angolo Di Mooca</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
+
+
+<!-- Música -->
+<audio play autoplay loop>
+    <source src="./mp3/sound.mp3" type="audio/mpeg">
+</audio>
 
     <!--TABLE MENU-->   
     <div class="HOMEBAR">
@@ -49,7 +57,7 @@
     <!--CARDAPIO-->
     <div class="cardapio" id="cardapio">
         <h1>CARDAPIO</h1>
-        <!-- Div auxiliar adicionada para organizar o alinhamento dos itens -->
+        <!-- Div auxiliar -->
         <div class="grid-cardapio">
             <div class="MACARRÃO">
                 <img src="./image/cardapio/macarrao3.webp" alt="Macarrão">
@@ -125,6 +133,65 @@
         <!-- Exemplo de iframe simples de um post ou widget de avaliação -->
         <iframe src="https://www.instagram.com/p/C_xY2uNxXyz/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
     </div>
+
+</body>
+
+<!-- MODAL -->
+<div id="modal-imagem" class="modal">
+
+    <span id="fechar-modal" class="fechar-modal">
+        &times;
+    </span>
+
+    <img id="imagem-modal">
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+    /* Seleciona elementos */
+    const modal = document.getElementById("modal-imagem");
+    
+    const imagemModal = document.getElementById("imagem-modal");
+    
+    const fechar = document.getElementById("fechar-modal");
+    
+    /* Seleciona TODAS imagens do cardápio */
+    const imagens = document.querySelectorAll(".grid-cardapio img");
+    
+    /* Quando clicar */
+    imagens.forEach(function(img) {
+    
+        img.addEventListener("click", function() {
+    
+            modal.style.display = "flex";
+    
+            imagemModal.src = this.src;
+    
+        });
+    
+    });
+    
+    /* Fechar no X */
+    fechar.addEventListener("click", function() {
+    
+        modal.style.display = "none";
+    
+    });
+    
+    /* Fechar fora */
+    modal.addEventListener("click", function(e) {
+    
+        if(e.target === modal) {
+    
+            modal.style.display = "none";
+    
+        }
+    
+    });
+    
+    </script>
 
 </body>
 </html>
