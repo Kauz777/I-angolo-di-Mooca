@@ -1,9 +1,11 @@
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo base */
 html {
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
@@ -11,18 +13,19 @@ html {
     color: #ffffff;
 }
 
+/* Fonte dos títulos */
 h1, th {
     font-family: 'Playfair Display', serif;
 }
 
-/* MENU superior */
+/* Menu superior */
 .HOMEBAR {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #121212;
     z-index: 1000;
-    border-bottom: 1px solid rgba(163, 184, 153, 0.2); /* Linha fina sutil sob o menu */
+    border-bottom: 1px solid rgba(163, 184, 153, 0.2);
 }
 
 .HOMEBAR table {
@@ -40,10 +43,10 @@ h1, th {
 }
 
 .HOMEBAR a:hover {
-    color: #ffffff; /* Destaca o link ao passar o mouse */
+    color: #ffffff;
 }
 
-/* FULLSCREEN para todas as secoes */
+/* Estrutura das seções */
 .inicio, .sobre, .cardapio, .pedido, .agendamento, .endereço {
     min-height: 100vh;
     display: flex;
@@ -52,15 +55,15 @@ h1, th {
     align-items: center;
     padding: 80px 20px;
     text-align: center;
-    position: relative; /* Necessário para o posicionamento dos novos divisores */
+    position: relative;
 }
 
-/* Esconde as divs soltas do HTML */
+/* Remove backgrounds extras */
 .background1, .background2, .background3 {
     display: none;
 }
 
-/* BACKGROUNDS com efeito fixo (Parallax) */
+/* Backgrounds */
 .inicio {
     background-image: url('../image/background/background1.jpg');
     background-size: cover;
@@ -82,7 +85,7 @@ h1, th {
     background-attachment: fixed;
 }
 
-/* SEÇÃO - Inicio */
+/* Início */
 .inicio img {
     max-width: 150px;
     margin-bottom: 20px;
@@ -93,32 +96,31 @@ h1, th {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-/* SEÇÃO - Sobre */
+/* Sobre */
 .sobre {
     background-color: #181818;
-    flex-direction: row;      
-    gap: 40px;                 
-    max-width: 100%;           
-    text-align: left;          
+    flex-direction: row;
+    gap: 40px;
+    text-align: left;
 }
 
 .sobre video {
-    width: 45%;                
+    width: 45%;
     max-width: 550px;
     border-radius: 8px;
-    order: 2;                  
+    order: 2;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .sobre h1 {
-    width: 45%;                
+    width: 45%;
     font-size: 22px;
     font-weight: 300;
     line-height: 1.6;
-    order: 1;                  
+    order: 1;
 }
 
-/* SEÇÃO - Cardapio */
+/* Cardápio */
 .cardapio {
     background-color: #1f1f1f;
 }
@@ -136,19 +138,19 @@ h1, th {
     max-width: 1000px;
 }
 
-/* MELHORIA VETORIAL: Cards com bordas gradientes sutis e efeito hover refinado */
+/* Cards */
 .grid-cardapio > div {
     background-color: #121212;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.4s;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .grid-cardapio > div:hover {
     transform: translateY(-8px);
-    border-color: rgba(163, 184, 153, 0.4); /* Brilho verde sálvia sutil na borda */
+    border-color: rgba(163, 184, 153, 0.4);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -165,7 +167,7 @@ h1, th {
     letter-spacing: 1px;
 }
 
-/* SEÇÃO - Pedido */
+/* Pedido */
 .pedido img {
     max-width: 180px;
     margin-top: 20px;
@@ -175,10 +177,10 @@ h1, th {
 }
 
 .pedido img:hover {
-    transform: scale(1.05); /* Sutil pulo no botão do WhatsApp */
+    transform: scale(1.05);
 }
 
-/* SEÇÃO - Agendamento (Formulario) */
+/* Formulário */
 .agendamento form {
     width: 100%;
     max-width: 400px;
@@ -195,7 +197,6 @@ h1, th {
     margin-bottom: 5px;
     font-size: 13px;
     color: #bcbcbc;
-    letter-spacing: 0.5px;
 }
 
 .agendamento input {
@@ -206,35 +207,34 @@ h1, th {
     border-radius: 6px;
     background-color: #121212;
     color: #ffffff;
-    transition: border-color 0.3s ease;
 }
 
 .agendamento input:focus {
     outline: none;
-    border-color: #a3b899; /* Foco elegante no input */
+    border-color: #a3b899;
 }
 
-/* O BOTÃO: Transição suave de cor */
+/* Botão */
 .btn-enviar {
     width: 100%;
     padding: 14px;
     background-color: #a3b899;
-    color: #121212;            
+    color: #121212;
     border: none;
     border-radius: 6px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 .btn-enviar:hover {
-    background-color: #bdcbb7; 
+    background-color: #bdcbb7;
     transform: translateY(-1px);
 }
 
-/* SEÇÃO - Endereco */
+/* Endereço */
 .endereço {
     background-color: #121212;
 }
@@ -247,15 +247,13 @@ h1, th {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* SEÇÃO - Depoimentos */
+/* Depoimentos */
 .depoimentos {
-    background-color: #181818; /* Mudado sutilmente para combinar com a alternância de fundos */
+    background-color: #181818;
     padding: 80px 20px;
     text-align: center;
-    position: relative;
 }
 
-/* MELHORIA VETORIAL: Linhas finas e elegantes de design italiano antes e depois do título */
 .depoimentos h1 {
     font-size: 32px;
     margin-bottom: 40px;
@@ -263,23 +261,23 @@ h1, th {
     display: inline-block;
 }
 
-.depoimentos h1::before, .depoimentos h1::after {
+/* Linhas decorativas */
+.depoimentos h1::before,
+.depoimentos h1::after {
     content: "";
     position: absolute;
     top: 50%;
     width: 60px;
     height: 1px;
-    background: linear-gradient(to var(--direction, right), #a3b899, transparent);
+    background: linear-gradient(to right, #a3b899, transparent);
 }
 
 .depoimentos h1::before {
     left: -80px;
-    --direction: left;
 }
 
 .depoimentos h1::after {
     right: -80px;
-    --direction: right;
 }
 
 .depoimentos iframe {
@@ -288,16 +286,21 @@ h1, th {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* RESPONSIVIDADE (Para Celular) */
+/* Responsividade */
 @media (max-width: 768px) {
+
     .sobre {
         flex-direction: column;
         text-align: center;
     }
-    .sobre video, .sobre h1 {
+
+    .sobre video,
+    .sobre h1 {
         width: 100%;
     }
-    .depoimentos h1::before, .depoimentos h1::after {
-        display: none; /* Remove as linhas decorativas em telas pequenas para não quebrar o texto */
+
+    .depoimentos h1::before,
+    .depoimentos h1::after {
+        display: none;
     }
 }
